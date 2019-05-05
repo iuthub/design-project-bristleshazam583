@@ -12,4 +12,14 @@ $(function(){
         $('.genre_cover img').removeClass('active').eq($(this).index()).addClass('active');
         $('.genre_info').removeClass('active').hide().eq($(this).index()).fadeIn(500);
     })
+
+    $('.btn').click(function(){
+        $('.menu').slideToggle(500);
+    })
+
+    $(window).resize(function(){
+        if($(window).width() > 768) {
+            $('.menu').removeAttr('style');
+        }
+    })
 })
